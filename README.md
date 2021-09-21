@@ -17,10 +17,10 @@ Followed by:
 
 This is the result of my live coding test with Big Human. 
 The goal was to achieve the following:
-    * Implement a simple applcation that allows the user to view NFL player data
-    * Consume the Sleeper API with the following link: [Sleeper API](https://api.sleeper.app/v1/players/nfl) 
-    * Display a table using Material-UI of Player name, Position, and Status
-    * Implement sort by name functionality
+- Implement a simple applcation that allows the user to view NFL player data
+- Consume the Sleeper API with the following link: [Sleeper API](https://api.sleeper.app/v1/players/nfl) 
+- Display a table using Material-UI displaying Player name, Position, and Status
+- Implement sort by name functionality
 
 The bulk of the logic was written in the [MainPage component](https://github.com/thecodingconductor/bigHumanTest/blob/main/src/component/MainPage.js)
 
@@ -28,7 +28,7 @@ Using the useState hook, I created local state in the MainPage component to stor
 
 One of the most interesting curveballs in this test came from the API itself. When queried, it returns an **Object** of Objects, and not an **Array** of Objects (Which I was expecting.)
 
-This led me to doing some quick research on Object methods, and discovered `Object.entries()` which seemed to be able to solve my problem.
+This led me to doing some quick research on Object methods, and discovered `Object.entries()` which seemed to be able to solve my problem by returning an array of key/value pairs.
 
 Once I was able to get an array of objects, I was able to display some data to the UI. I borrowed some code from the Material-UI Documentation to build a simple table, which you can see when you run the application.
 
